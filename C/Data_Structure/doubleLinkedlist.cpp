@@ -36,6 +36,18 @@ void pushTail(struct Node *newNode){
         tail = newNode;
     }
 }
+
+void pushMid(Node *newNode){
+    
+    if(head == NULL){
+        head = tail = newNode;
+    }
+    else {
+        tail->next = newNode;
+        newNode->prev = tail;
+        tail = newNode;
+    }
+}
 int main(){
 
 
