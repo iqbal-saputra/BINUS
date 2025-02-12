@@ -8,7 +8,6 @@ struct Address{
     char city[101];
     char province[101];
 };
-
 struct Birth{
     char place[101];
     int day;
