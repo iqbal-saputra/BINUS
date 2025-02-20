@@ -171,33 +171,31 @@ void print(){
 }
 int main(){
 	
-//	pushHead(newNode(8));
-//	pushHead(newNode(2));
-//	pushHead(newNode(5));
+	pushHead(newNode(8));
+	pushHead(newNode(2));
+	pushHead(newNode(5));
 	
-//	pushTail(newNode(1));
-//	pushTail(newNode(3));
-//	pushTail(newNode(7));
+	pushTail(newNode(1));
+	pushTail(newNode(3));
+	pushTail(newNode(7));
 	
-//	pushMid(newNode(1));
-//	pushMid(newNode(3));
-//	pushMid(newNode(2));
+	pushMid(newNode(1));
+	pushMid(newNode(3));
+	pushMid(newNode(2));
 	
-//	search(2);
-//	search(10);
+	search(2);
+	search(10);
 	
-//	print();
+	print();
 	
-//	popHead();
-//	print();
+	popHead();
+	print();
 
-//	popTail();
-//	print();
+	popTail();
+	print();
 
-//	popMid(2);
-//	print();
-	
-	
+	popMid(2);
+	print();
 	
 	return 0;
 }
