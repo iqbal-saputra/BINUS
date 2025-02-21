@@ -78,6 +78,39 @@ void insertAfter(int key, int x) {
     current->next = node;
 }
 
+void deleteNode(int data){
+
+    if(head == tail){
+        head = tail = NULL;
+        free(head);
+    }
+    else if(head->value == data){
+        Node *temp = head;
+        head = head->next;
+        head->prev = NULL;
+        free(temp);
+    }
+    else if(tail->value == data){
+        Node *temp = tail;
+        tail = tail->prev;
+        tail->next = NULL;
+        free(temp);
+    }
+    else {
+        Node *current = head;
+        while(current != NULL && current->value != data){
+            current = current->next;
+        }
+        if(current->next != NULL){ 
+            Node *temp = current;
+            current->prev->next = temp->next;
+            temp->next->prev = current->prev;
+            free(temp);
+        }
+
+    }
+}
+
 void displayForward() {
     Node *current = head;
     printf("Forward: ");
@@ -102,6 +135,10 @@ int main() {
 
     insertAfter(24, 15);
     printf("Setelah insert di tengah (setelah 24):\n");
+    displayForward();
+
+    deleteNode(10);
+    printf("Setelah delete node (10):\n");
     displayForward();
 
     return 0;
