@@ -197,5 +197,7 @@ int main(){
 	popMid(2);
 	print();
 	
+	
+	
 	return 0;
 }
