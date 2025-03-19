@@ -56,7 +56,9 @@ void pushMid(Node *newNode){
             curr = curr->next;
         }
         newNode->next = curr->next;
-        curr->next->prev = newNode;
+        if(curr->next != NULL){
+            curr->next->prev = newNode;
+        }
         curr->next = newNode; // pointer hanya bisa menunjuk satu arah
         newNode->prev = curr;
     }
